@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.index');
+});
+
+Route::get('/profile/{id?}', function(){
+    return view('admin.profile');
 });
 
 Route::middleware([

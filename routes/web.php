@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,16 @@ Route::get('/profile/{id?}', function(){
     return view('admin.profile');
 });
 
+
+//Raw Material Routes
+Route::get('/raw_materials' , [AdminController::class , 'getRM']);
+Route::get('/add_materials' , [AdminController::class , 'addRM']);
+
+
+
+
+
+//Jetstream
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('raw_materials', function (Blueprint $table) {
             $table->id();
             $table->string('material_name');
-            $table->string('supplier')->nullable();
+            $table->unsignedBigInteger('supplier_id');
+            $table->foreign('supplier_id')->references('id')->on('suppliers')->onDelete('Cascade')->onUpdate('Cascade');
             $table->integer('quantity');
             $table->decimal('cost_price', 10, 2);
             $table->string('batch_number')->nullable();

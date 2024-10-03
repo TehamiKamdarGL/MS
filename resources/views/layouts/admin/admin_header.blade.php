@@ -282,6 +282,12 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
+        <a class="nav-link collapsed" href="/suppliers">
+          <i class="bi bi-menu-button-wide"></i><span>Suppliers List</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
         <a class="nav-link collapsed" href="/raw_materials">
           <i class="bi bi-menu-button-wide"></i><span>Raw Material</span>
         </a>
